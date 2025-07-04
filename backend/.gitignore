@@ -1,0 +1,54 @@
+# Entornos virtuales
+venv/
+env/
+.venv/
+venv*/
+.env*/
+.python-version
+
+# Base de datos
+db.sqlite3
+*.sqlite
+/pgdata/          # Datos locales de PostgreSQL
+/postgres_data/   # Volumen típico de Docker
+/db_backups/      # Carpeta para backups
+
+# Archivos sensibles
+.env
+.env.local
+.env*.local
+.env.development
+.env.production
+.env.test
+secrets.json
+*.key
+*.pem
+*.cert
+*.pgpass 
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.log
+*.pot
+*.pyc
+.pytest_cache/
+.mypy_cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-*
+
+# Sistema
+.DS_Store
+thumbs.db
+desktop.ini
+
+# Media y archivos generados
+/media/
+/staticfiles/
+*.bak
