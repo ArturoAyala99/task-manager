@@ -79,6 +79,26 @@ cd ../frontend/
 npm run dev
 ```
 
+## 📸 Capturas de pantalla
+![Login](imagenes-proyecto/login.png)  
+
+![Register](imagenes-proyecto/register.png)  
+
+![Panel](imagenes-proyecto/tasklist.png) 
+![Panel](imagenes-proyecto/tasklist2.png)  
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
