@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
-//import { login } from '../services/auth';
 import { loginSuccess } from '../redux/authSlice';
 import { Button, Card, Container, Form } from 'react-bootstrap';
 import axiosInstance from "../axiosInstance";
@@ -45,7 +44,7 @@ const Login = () => {
 
           <Form.Group className="mb-3">
             <Form.Label>Contraseña</Form.Label>
-            <Form.Control type="text" name="password" value={credentials.password} onChange={(e) => setCredentials({...credentials, password: e.target.value})} required/>
+            <Form.Control type="password" name="password" value={credentials.password} onChange={(e) => setCredentials({...credentials, password: e.target.value})} required/>
           </Form.Group>
 
           {error && <div className="error">{error}</div>}

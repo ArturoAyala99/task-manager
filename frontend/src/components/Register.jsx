@@ -1,9 +1,7 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
 import { useNavigate, Link } from 'react-router-dom';
 import { Form, Button, Container, Card, Alert } from 'react-bootstrap';
-//import api from '../api/axios';
-// import { loginSuccess } from '../redux/authentication/'; 
+import axiosInstance from "../axiosInstance";
 
 const Register = () => {
     const [formData, setFormData] = useState({
@@ -23,14 +21,14 @@ const Register = () => {
         }
         
         try {
-            await api.post('/register/', {
+            await axiosInstance.post('accounts/register/', {
                 username: formData.username,
                 email: formData.email,
                 password: formData.password
             });
             navigate('/tasklist');
         } catch (err) {
-            setError(err.response?.data?.message || 'Error al registrar');
+            setError(err.response?.data?.message || 'Error al registrar');console.log(err)
         }
     };
 
