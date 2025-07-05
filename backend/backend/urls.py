@@ -22,4 +22,7 @@ urlpatterns = [
 
     #api productos
     path('api/tareas/', include('tareas_app.urls')),
+
+    #api accouunts
+    path('api/accounts/', include('accounts_app.urls')),
 ]

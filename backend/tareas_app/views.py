@@ -5,9 +5,11 @@ from .serializers import TareaSerializer
 from rest_framework.response import Response
 from rest_framework import status
 from django.http import Http404
+from rest_framework.permissions import IsAuthenticated
 
 # Create your views here.
 class Tareas(APIView):
+    permission_classes = [IsAuthenticated]
     #get Tareas
     def get(self, request):
         productos = Tarea.objects.all()
@@ -28,6 +30,7 @@ class Tareas(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class TareaTareaDetail(APIView):
+    permission_classes = [IsAuthenticated]
     def get_object(self, pk):
         try:
             return Tarea.objects.get(pk=pk)
